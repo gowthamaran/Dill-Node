@@ -9,8 +9,8 @@ print_clickable_link() {
 
 # Display clickable links
 echo -e "\nFollow us"
-print_clickable_link "Join Telegram channel" "https://t.me/maranscrypto"
-print_clickable_link "Follow us on 𝕏" "https://x.com/maranscrypto"
+print_clickable_link  "https://t.me/maranscrypto"
+print_clickable_link  "https://x.com/maranscrypto"
 echo -e "\n"
 
 _ROOT="$(pwd)" && cd "$(dirname "$0")" && ROOT="$(pwd)"
