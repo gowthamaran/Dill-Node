@@ -1,9 +1,16 @@
 #!/bin/bash
 
-# Display links
-echo -e "\nImportant Links:"
-echo -e "Join Telegram channel: <a href='https://t.me/maranscrypto' target='_blank'>https://t.me/maranscrypto</a>"
-echo -e "Follow us on 𝕏 : <a href='https://x.com/maranscrypto' target='_blank'>https://x.com/maranscrypto</a>"
+# Function to create clickable links
+print_clickable_link() {
+    local text="$1"
+    local url="$2"
+    printf '\e]8;;%s\e\\%s\e]8;;\e\\\n' "$url" "$text"
+}
+
+# Display clickable links
+echo -e "\nFollow us"
+print_clickable_link "Join Telegram channel" "https://t.me/maranscrypto"
+print_clickable_link "Follow us on 𝕏" "https://x.com/maranscrypto"
 echo -e "\n"
 
 _ROOT="$(pwd)" && cd "$(dirname "$0")" && ROOT="$(pwd)"
